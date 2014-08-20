@@ -1,0 +1,151 @@
+/*
+ * CSS3 Box-Shadow Experiment
+ * http://www.burakkaya.com
+ *
+ * Created by Burak KAYA
+ * 
+ * June 2012
+ */
+
+/* Page
+ --------------------------------- */
+@font-face {
+	font-family: SuperPlumberBrothers;
+	src: url(SuperPlumberBrothers.ttf);	
+    src: url('SuperPlumberBrothers.eot');
+    src: local('Super Plumber Brothers'), local('SuperPlumberBrothers'),
+    url('SuperPlumberBrothers.woff') format('woff'),
+    url('SuperPlumberBrothers.otf') format('opentype');
+}
+
+
+body{
+	background:#fefefe url(../images/body_bg.jpg) repeat-x left bottom fixed;
+	font:14px/20px Arial, Helvetica, sans-serif;
+}
+
+
+#wrapper{
+	background:url(../images/boxShadow.png) no-repeat 200px 200px;
+	margin:0px auto;
+	width:960px;
+}
+#footer{
+	color:#666;
+	font-size:10px;
+	padding:10px 0px 100px;
+	text-align:center;	
+}
+
+h1{
+	color:#d54b00;
+	font-family:SuperPlumberBrothers, serif;
+	font-size:50px;
+	line-height:60px;
+	text-align:center;
+	text-shadow:1px 3px 0px #050505;
+}
+
+a, a:visited{
+	color:#666;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+a:hover{
+	color:#d54b00;	
+}
+
+
+.sampleCode{
+	background:url(../images/code_bg.gif) repeat left top;
+	border-left:5px solid #36a6f1;
+	display:block;
+	font-size:12px;
+	line-height:25px;
+	text-shadow:none;
+}
+
+#sampleContainer{
+	background:url(../images/divHere.png) no-repeat 260px 40px;
+	height:162px;
+	margin:0px 100px 100px;
+	padding-top:100px;
+	position:relative;
+}
+
+.sample {
+	border:1px dotted #999;
+	height: 20px;
+	position:absolute;
+	left:50%;
+	margin-left:-71px;
+	width: 20px;
+	box-shadow:	20px 20px 0px #000, 100px 20px 0px #000, 0px 40px 0px #000, 20px 40px 0px #000, 40px 40px 0px #000, 80px 40px 0px #000, 100px 40px 0px #000, 120px 40px 0px #000, 20px 60px 0px #000, 100px 60px 0px #000, -20px 120px 0px #000, 140px 120px 0px #000, 0px 140px 0px #000, 20px 140px 0px #000, 40px 140px 0px #000, 60px 140px 0px #000, 80px 140px 0px #000, 100px 140px 0px #000, 120px 140px 0px #000;
+}
+
+
+/* Game Screen
+ --------------------------------- */
+#sliderContainer {
+	background-color:#4b525e;
+	border-top:2px solid #4174d2;
+	border-right:2px solid #83afff;
+	border-bottom:2px solid #83afff;
+	border-left:2px solid #4174d2;
+	padding:2px;
+	position:relative;
+	left:10px;
+	top:10px;
+	width:60px;
+} 
+
+#sliderContainer a{
+	background-color:#80d010;
+	color:#fff;
+	display:block;
+	font-size:9px;	
+	line-height:normal;
+	padding:5px 0px 4px;
+	text-align:center;
+	-webkit-transition: all 0.25s ease-in-out;  
+	-moz-transition: all 0.25s ease-in-out;  
+	transition: all 0.25s ease-in-out;  
+	width:30px;
+}
+
+#sliderContainer a.off{
+	background-color:#C30;
+	color:#fff;
+	margin-left:30px;
+} 
+ 
+#gameScreen{
+	height: 400px;
+	width: 640px;
+	margin: 140px auto 30px;
+	background-color: #5c94fc;
+	border: 5px solid #000;
+	position: relative;
+}
+
+#gameScreen h1{
+	background-color:#d54b00;
+	border-top:2px solid #fdc4b9;
+	border-right:2px solid #000;
+	border-bottom:2px solid #000;
+	border-left:2px solid #fdc4b9;
+	color:#ffc3b8;
+	left:50%;
+	margin-left:-122px;
+	padding:10px;
+	position:absolute;
+	width:220px;
+	z-index:1;
+	top:-140px;
+}
+        
+#gameScreen div.disabled{
+	box-shadow:none !important;
+	border:1px solid #fff;
+}

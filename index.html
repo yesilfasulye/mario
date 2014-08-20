@@ -1,1 +1,147 @@
-Hello world
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Super Mario Bros. - CSS3 Box-Shadow Experiment</title>
+    <meta name="keywords" content="super mario,mario,super mario bros.,nintendo,css,css3,box-shadow,shadow,experiment" />
+	<meta name="description" content="Super Mario Bros. / CSS3 Box-Shadow Experiment by Burak KAYA" />
+	<link href="styles/mario.css" rel="stylesheet" type="text/css" />
+	<link href="styles/page.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    
+<div id="wrapper"> 
+
+	<h1 class="title">Super Mario Bros.<br />CSS3 Box-Shadow Experiment</h1>
+	
+	<div id="gameScreen">
+    	<div id="sliderContainer">
+        	<a href="#" id="sliderButton">ON</a>
+        </div>
+    	<h1>SUPER<br />MARIO BROS.</h1>
+        <div class="cloud"></div>
+        <div class="cloud" id="cloud_1"></div>
+        <div class="cloud" id="cloud_2"></div>
+        <div class="mario"></div>
+        <div class="brick"></div>
+        <div class="brick" id="brick_1"></div>
+        <div class="brick" id="brick_2"></div>
+        <div class="brick" id="brick_3"></div>
+        <div class="box"></div>
+        <div class="box" id="box_1"></div>
+        <div class="boxQ"></div>
+        <div class="boxQ" id="boxQ_1"></div>
+        <div class="road"></div>
+        <div class="pipe"></div>
+        <div class="bush"></div>
+        <div class="bush" id="bush_1"></div>
+        <div class="hill"></div>
+        <div class="mushroom"></div>
+        <div class="goomba"></div>
+        <div class="gold"></div>
+        <div class="gold" id="gold_1"></div>
+        <div class="koopa"></div> 
+    </div>
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style " style="margin:0px auto;width:400px;">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e22edc23d4d58ed"></script>
+<!-- AddThis Button END -->
+    <p>CSS <strong>box-shadow</strong> allow us to create pretty cool shapes that don't even look like shadows. You can add more than one shadow to elements. You just have to seperate each shadow by a comma. It can be funny to create shapes with <strong>box-shadow</strong> but sometimes it can be a little bit tiring. For example to create Mario character I use 143 shadows and 987 shadows for the pipe. Crazy huh? :) </p>
+  <p>You can try to draw Mona Lisa at home. =)</p>
+  <p><strong>NOTE :</strong> Works in Chrome, Firefox, Safari, Opera and Internet Explorer 9 latest versions.</p>
+  <br/>
+  
+  <h1>Box-Shadow Sample</h1>
+  
+  <pre class="sampleCode"><code>
+    &lt;div class=&quot;sample&quot; &gt;&lt;/div&gt;
+    
+    &lt;style type=&quot;text/css&quot; &gt;
+    .sample {
+    	border: 1px dotted #999;
+    	height: 20px;
+    	width: 20px;
+    	box-shadow:	20px 20px 0px #000, 100px 20px 0px #000,
+                            
+                        0px 40px 0px #000, 20px 40px 0px #000, 40px 40px 0px #000, 80px 40px 0px #000, 100px 40px 0px #000,
+                        120px 40px 0px #000,
+                        
+                        20px 60px 0px #000, 100px 60px 0px #000,
+                        
+                        -20px 120px 0px #000, 140px 120px 0px #000,
+                        
+                        0px 140px 0px #000, 20px 140px 0px #000, 40px 140px 0px #000, 60px 140px 0px #000, 80px 140px 0px #000,
+                        100px 140px 0px #000, 120px 140px 0px #000;
+                            
+    }
+    &lt;/style&gt;
+   </code></pre>
+    
+  <div id="sampleContainer">
+  	<div class="sample"></div>
+  </div>
+  
+  <div id="disqus_thread"></div>
+	<script type="text/javascript">
+        var disqus_shortname = 'burakkaya';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+  
+    
+    <p id="footer">Mario Bros and all related characters are registered trademarks of <a href="http://www.nintendo.com" target="_blank">Nintendo Co.</a><br/>Created by <a href="http://www.burakkaya.com">Burak KAYA</a> - June 2012 / Super Mario Bros. CSS3 Box-Shadow Experiment</p>
+</div>    
+    
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+
+            var roadXPos = 32;
+            for (i = 0; i < 40; i++) {
+                if ([(i * roadXPos) - 2] >= 638) {
+                    $("#gameScreen").append('<div class="road" style="left:' + [((i - 20) * roadXPos) - 2] + 'px;bottom:32px;"></div>');
+                } else {
+                    $("#gameScreen").append('<div class="road" style="left:' + [(i * roadXPos) - 2] + 'px;"></div>');
+                }
+            }
+			
+			$("#sliderButton").toggle(function(){
+				$(this).addClass("off").html("OFF");
+				$("#gameScreen div:not(#sliderContainer)").addClass("disabled");
+			},function(){
+				$(this).removeClass("off").html("ON");
+				$("#gameScreen div:not(#sliderContainer)").removeClass("disabled");
+			})
+
+        });
+
+    </script>
+    <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e22edc23d4d58ed"></script>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-24153203-2']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+</body>
+</html>
